@@ -1,0 +1,31 @@
+server:
+  port: 8015
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+      force-request: true
+      force-response: true
+  tomcat:
+    uri-encoding: UTF-8
+
+#security 설정을 추가하니 generated password를 확인할 수 있음
+spring:
+#  security:
+#    user:
+#      name: test
+#      password: 1234
+  mvc:
+    static-path-pattern: /static/**
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://web-study.comk4qk0lgp4.ap-northeast-2.rds.amazonaws.com:3306/sys?useUnicode=true&characterEncoding=UTF-8
+    username: admin
+    password: 1q2w3e4r
+    
+mybatis:
+  mapper-locations:
+  - /mappers/*.xml  
+
+
